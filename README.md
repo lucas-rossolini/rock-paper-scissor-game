@@ -6,6 +6,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
   - [Available Scripts](#available-scripts)
 - [My process](#my-process)
@@ -27,9 +28,13 @@ Users should be able to:
 - Play Rock, Paper, Scissors against the computer
 - Maintain the state of the score after refreshing the browser _(optional)_
 
+### Screenshot
+
+![paper-rock-scissor game screenshot](./screenshot.png)
+
 ### Links
 
-- [Live Site](###)
+- [See it in action !](https://lucas-rossolini.github.io/rock-paper-scissor-game/)
 
 
 ## Available Scripts
