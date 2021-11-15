@@ -1,0 +1,18 @@
+.stageContainer {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(20.3125rem, 86.7vw, 41.125rem);
+  margin-top: 6.1875rem;
+  align-items: center;
+}
+
+@media only screen and (min-width: 62.5em) {
+  .stageContainer--winLose {
+    width: 58.625rem;
+    transition: width 0.5s;
+  }
+
+  .stageContainer .stageContainer--winLose {
+    width: unset;
+  }
+}

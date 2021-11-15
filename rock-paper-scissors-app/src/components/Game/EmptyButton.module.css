@@ -1,0 +1,34 @@
+.emptyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(6.875rem, 29.3vw, 14rem);
+  height: clamp(6.875rem, 29.3vw, 14rem);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.countDown {
+  font-family: var(--ff-primary);
+  font-size: clamp(3rem, 12.8vw, 5rem);
+  font-weight: var(--fw-bold);
+  color: var(--clr-font-primary);
+  animation: spinDial 0.5s linear 0s 3;
+  transform-origin: 50% 200%;
+}
+
+@keyframes spinDial {
+  from {
+    transform: rotate(-55deg);
+  }
+  to {
+    transform: rotate(55deg);
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  .emptyBtn {
+    margin-right: clamp(1.216875rem, 5.19vw, 2.144062rem);
+  }
+}

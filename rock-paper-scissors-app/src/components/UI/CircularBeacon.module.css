@@ -1,0 +1,71 @@
+.circularBeacon::before {
+  /* width variables to locate ring */
+  --boxWidth: clamp(18rem, 76.8vw, 45.625rem);
+  --contentWidth: clamp(8.125rem, 34.67vw, 18.25rem);
+  --differenceWidth: calc(var(--boxWidth) - var(--contentWidth));
+
+  /* height variables to locate ring */
+  --boxHeight: clamp(17.75rem, 75.73vw, 44.875rem);
+  --boxHeightHalf: calc(var(--boxHeight) / 2);
+  --contentHeight: clamp(8.3125rem, 35.46vw, 18.75rem);
+  --contentHeightHalf: calc(var(--contentHeight) / 2);
+  --y-offset: 95px;
+  --center-line: calc(var(--y-offset) + var(--contentHeightHalf));
+  --differenceHeight: calc(var(--center-line) - var(--boxHeightHalf));
+  content: '';
+  position: absolute;
+
+  left: calc(-1 * var(--differenceWidth) / 2);
+  top: var(--differenceHeight);
+
+  width: var(--boxWidth);
+  height: var(--boxHeight);
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+  animation: radiantRings 0.5s ease-in 1 forwards;
+}
+
+@keyframes radiantRings {
+  33% {
+    --boxWidth: clamp(10.4375rem, 44.53vw, 26.5rem);
+    --boxHeight: clamp(10.25rem, 43.73vw, 26rem);
+
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) clamp(4.0625rem, 17.3vw, 9.375rem),
+      rgba(255, 255, 255, 0.06) clamp(4.0625rem, 17.3vw, 9.375rem)
+    );
+  }
+
+  66% {
+    --boxWidth: clamp(13.9375rem, 59.46vw, 35.25rem);
+    --boxHeight: clamp(13.6875rem, 58.4vw, 34.625rem);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) clamp(4.0625rem, 17.3vw, 9.375rem),
+      rgba(255, 255, 255, 0.06) clamp(4.0625rem, 17.3vw, 9.375rem),
+      rgba(255, 255, 255, 0.06) clamp(5.21875rem, 22.26vw, 13.25rem),
+      rgba(255, 255, 255, 0.04) clamp(5.21875rem, 22.26vw, 13.25rem)
+    );
+  }
+  100% {
+    --boxWidth: clamp(18rem, 76.8vw, 45.625rem);
+    --boxHeight: clamp(17.75rem, 75.73vw, 44.875rem);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0) clamp(4.0625rem, 17.3vw, 9.375rem),
+      rgba(255, 255, 255, 0.06) clamp(4.0625rem, 17.3vw, 9.375rem),
+      rgba(255, 255, 255, 0.06) clamp(5.21875rem, 22.26vw, 13.25rem),
+      rgba(255, 255, 255, 0.04) clamp(5.21875rem, 22.26vw, 13.25rem),
+      rgba(255, 255, 255, 0.04) clamp(6.96875rem, 29.73vw, 17.625rem),
+      rgba(255, 255, 255, 0.027) clamp(6.96875rem, 29.73vw, 17.625rem)
+    );
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .circularBeacon::before {
+    --y-offset: 0px;
+  }
+}

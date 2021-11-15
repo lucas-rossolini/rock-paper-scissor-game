@@ -1,0 +1,19 @@
+.xbtn {
+  position: relative;
+  display: block;
+  background-color: unset;
+  width: 1.1875rem;
+  height: 1.1875rem;
+  border: unset;
+}
+
+.xbtn:hover {
+  /* background-color: #eee; */
+  outline: 3px #000 solid;
+  border-radius: 3px;
+}
+
+.xbtn:active {
+  border-bottom: 1px #000 solid;
+  border-right: 1px #000 solid;
+}

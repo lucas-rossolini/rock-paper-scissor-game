@@ -1,0 +1,45 @@
+.stageBtnContainer {
+  position: relative;
+  height: clamp(11.375rem, 48.5vw, 24.6875rem);
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr min-content;
+  gap: clamp(1.0625rem, 4.5vw, 3.9375rem);
+}
+
+.stageBtn {
+  font-size: clamp(1rem, 4.27vw, 1.477812rem);
+  align-self: center;
+}
+
+.stageTitle {
+  height: min-content;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-font-primary);
+  font-size: clamp(0.9375rem, 4vw, 1.5rem);
+  line-height: 2rem;
+  letter-spacing: clamp(0.117188rem, 0.5vw, 0.1875rem);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 62.5em) {
+  .stageBtnContainer {
+    grid-template-rows: min-content 1fr;
+    align-items: end;
+  }
+  .stageTitle--EmptyBtn {
+    margin-right: clamp(1.216875rem, 5.19vw, 2.144062rem);
+  }
+
+  .containerOrder {
+    order: 2;
+  }
+  .stageBtn {
+    order: 2;
+  }
+  .stageTitle {
+    order: 1;
+  }
+}

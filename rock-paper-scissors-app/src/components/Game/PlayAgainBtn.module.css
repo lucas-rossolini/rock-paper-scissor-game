@@ -1,0 +1,20 @@
+.playAgainText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-light);
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.15625rem;
+  color: #3b4262;
+  text-transform: uppercase;
+  height: 3rem;
+  border-radius: 0.5rem;
+
+  /* button reset stuff */
+  cursor: pointer;
+  background-color: unset;
+  border: unset;
+  text-align: unset;
+}

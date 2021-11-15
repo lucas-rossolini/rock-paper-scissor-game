@@ -1,0 +1,27 @@
+.scoreHeader,
+.scoreNumber {
+  font-family: var(--ff-primary);
+  text-align: center;
+}
+
+.scoreHeader {
+  color: var(--clr-font-score);
+  text-transform: uppercase;
+  font-size: clamp(0.625rem, 2.6vw, 1rem);
+  line-height: clamp(0.75rem, 3.2vw, 1.1875rem);
+  letter-spacing: 1.5625px;
+  font-weight: var(--fw-light);
+}
+
+.scoreNumber {
+  color: var(--clr-font-secondary);
+  font-size: clamp(2.5rem, 10.7vw, 4rem);
+  line-height: 1em;
+  font-weight: var(--fw-bold);
+}
+
+.scoreContainer {
+  width: clamp(5rem, 21.3vw, 9.375rem);
+  height: clamp(4.5rem, 19.2vw, 7.125rem);
+  padding: clamp(10px, 2.6vw, 16px) 0 clamp(10px, 2.6vw, 16px) 0;
+}

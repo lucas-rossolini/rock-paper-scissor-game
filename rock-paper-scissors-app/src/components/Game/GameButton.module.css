@@ -1,0 +1,162 @@
+/* button style reset */
+
+.btnContainer {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  align-items: unset;
+  text-align: unset;
+  display: unset;
+  text-rendering: unset;
+  letter-spacing: unset;
+  word-spacing: unset;
+  text-indent: unset;
+  text-shadow: unset;
+  text-transform: unset;
+}
+
+.btnContainer,
+.btnContainer::before {
+  width: clamp(8.085625em, 34.4987vw, 12.375em);
+  border-radius: 50%;
+}
+
+.paper {
+  background-color: var(--clr-game-icon-paper-secondary);
+}
+
+.paper::before {
+  background-color: var(--clr-game-icon-paper-primary);
+}
+
+.rock {
+  background-color: var(--clr-game-icon-rock-secondary);
+}
+.rock::before {
+  background-color: var(--clr-game-icon-rock-primary);
+}
+
+.scissors {
+  background-color: var(--clr-game-icon-scissors-secondary);
+}
+.scissors::before {
+  background-color: var(--clr-game-icon-scissors-primary);
+}
+
+/* secondary color - shadow effect */
+.btnContainer {
+  display: block;
+  position: relative;
+  height: clamp(8.29125em, 35.376vw, 12.6875em);
+  z-index: 1;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+
+.btnContainer:focus {
+  outline: 5px solid black;
+}
+
+/* primary color */
+.btnContainer::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  height: clamp(7.92375em, 33.808vw, 12.125em);
+  background-image: var(--clr-game-icon-highlight);
+  z-index: -1;
+}
+
+.symbolBackground,
+.symbolBackground::before {
+  border-radius: 50%;
+  width: clamp(6.206875em, 26.483vw, 9.5em);
+}
+
+.symbolBackground {
+  display: flex;
+  justify-content: center;
+  height: clamp(6.208125em, 26.488vw, 9.5em);
+  position: relative;
+  margin: auto;
+  background-color: var(--clr-game-icon-center-shadow);
+}
+
+.symbolBackground::before {
+  height: clamp(5.88125em, 25.093vw, 9em);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background-image: var(--clr-game-icon-center-bg);
+}
+
+.symbolBackground img {
+  display: block;
+  position: relative;
+  margin: auto;
+  z-index: 3;
+}
+
+/* custom sizing for each icon */
+.paperSize img {
+  width: clamp(2.679375em, 11.4vw, 4.09625em);
+  height: clamp(3.26625em, 13.9vw, 5.0125em);
+}
+
+.scissorsSize img {
+  width: clamp(2.816875em, 12.0187vw, 4.316875em);
+  height: clamp(3.193125em, 13.62vw, 4.88875em);
+}
+
+.rockSize img {
+  width: clamp(2.628125em, 11.213vw, 4.01875em);
+  height: clamp(2.6375em, 11.253vw, 4.035em);
+}
+
+/* grid location classes */
+.grid-left {
+  justify-self: start;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.grid-right {
+  justify-self: end;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.grid-bottom {
+  justify-self: center;
+  align-self: end;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.btnContainer:active:enabled {
+  transform: translateY(9px);
+}
+
+@media only screen and (min-width: 62.5rem) {
+  /* enabled used to not allow hover on disabled state */
+  .btnContainer:hover:enabled {
+    cursor: pointer;
+  }
+
+  .btnContainer:hover:enabled::after {
+    position: absolute;
+    content: '';
+    top: -1.5em;
+    left: -1.6875em;
+    width: 15.75em;
+    height: 15.5em;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.05;
+    z-index: -2;
+  }
+}

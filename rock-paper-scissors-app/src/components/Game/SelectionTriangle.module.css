@@ -1,0 +1,19 @@
+.triangleContainer {
+  margin: 6.5625rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-rows: repeat(2, minmax(min-content, 1fr));
+  background-image: url('../../images/bg-triangle.svg');
+  background-size: clamp(10.375rem, 44.3vw, 15.875rem),
+    clamp(11.75rem, 50.1vw, 17.9375rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: clamp(19.5rem, 83.2vw, 29.75rem);
+  height: clamp(17.625rem, 75.2vw, 26.875rem);
+}
+
+@media only screen and (min-width: 62.5em) {
+  .triangleContainer {
+    margin: 4rem auto 0 auto;
+  }
+}

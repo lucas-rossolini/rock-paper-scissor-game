@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 3px solid red; */
+}
+
+:root,
+*::before,
+*::after {
+  --clr-font-primary: #fff;
+  --clr-font-secondary: #565468;
+  --clr-font-score: #2a45c2;
+
+  --clr-whiteFade-bg: linear-gradient(0deg, #f3f3f3 0%, #ffffff 100%);
+
+  --clr-bg: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+
+  /* all buttons */
+  --clr-game-icon-center-bg: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  --clr-game-icon-center-shadow: #babfd4;
+
+  /* might be able to use radial-gradient()  */
+  /* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%) */
+  --clr-game-icon-scissors-primary: #ec9e0e;
+  --clr-game-icon-scissors-secondary: #c76c1b;
+
+  /* - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%) */
+  --clr-game-icon-paper-primary: #4664f4;
+  --clr-game-icon-paper-secondary: #2a45c2;
+
+  /* - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)*/
+  --clr-game-icon-rock-primary: #db2e4d;
+  --clr-game-icon-rock-secondary: #9d1634;
+
+  /* shadow on all game icons */
+  --clr-game-icon-highlight: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.0966455) 0%,
+    rgba(255, 255, 255, 0.0001) 100%
+  );
+
+  --ff-primary: 'Barlow Semi Condensed', sans-serif;
+  --fw-light: 600;
+  --fw-bold: 700;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: var(--clr-bg);
+  min-height: 100vh;
+  padding: clamp(2rem, 8.53vw, 3rem) 2rem 0px 2rem;
+  overflow: hidden;
+}
